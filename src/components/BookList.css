@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+li {
+  list-style: none;
+}
+.book-list-main {
+  background-color: burlywood;
+}
+
+.book-list-search-conteiner {
+  background-color: aquamarine;
+}
+
+.book-list-search-conteiner input[type="text"]{
+    font-size: 2rem;
+    margin: 50px;
+}
+
+.book-list-content ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);}
+
+.book-list-content ul li {
+    background-color: blueviolet;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
