@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "author": "Daun",
+    "price": 12.22,
+    "image": "1",
+    "title": "KNIGA DAUNA",
+    "shortDescription": "hellow",
+    "description": "super long description"
+  },
+  {
+    "id": 2,
+    "author": "Daun2",
+    "price": 22.22,
+    "image": "1",
+    "title": "KNIGA DAUNA",
+    "shortDescription": "hellow",
+    "description": "super long description"
+  },
+  {
+    "id": 3,
+    "author": "Daun3",
+    "price": 32.22,
+    "image": "1",
+    "title": "KNIGA DAUNA",
+    "shortDescription": "hellow",
+    "description": "super long description"
+  }
+]

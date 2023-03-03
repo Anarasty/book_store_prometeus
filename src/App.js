@@ -3,8 +3,9 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import BookList from "./components/BookList";
 import Cart from "./components/Cart";
 import LoginPage from "./components/LoginPage";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import NotFoundPage from "./components/NotFoundPage";
+import './App.css';
 
 // Book data (mocked)
 
@@ -14,7 +15,7 @@ function App() {
       <div className="App">
         <header>
           {/* <Navbar /> */}
-          <nav>
+          <nav className="navbar">
             <div className="logo">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/1024px-LEGO_logo.svg.png"
@@ -43,7 +44,7 @@ function App() {
 
         <footer>
           <p>
-            This bookstore was created by Jane Doe. Source code is available on{" "}
+            Prometeus{" "}
             <a href="https://github.com/janedoe/bookstore">GitHub</a>.
           </p>
         </footer>
