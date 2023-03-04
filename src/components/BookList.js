@@ -73,7 +73,11 @@ function BookList() {
                   alt="NoImage"
                 />
               )}
-              <h3>{book.title}</h3>
+              <h3>
+                {book.title.length > 24
+                  ? `${book.title.slice(0, 24)}...`
+                  : book.title}
+              </h3>
               <p>{book.author}</p>
               <p>{book.price} USD</p>
               <Link className="showBook" to={`/book/${book.id}`}>
