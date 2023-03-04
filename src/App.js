@@ -5,7 +5,8 @@ import Cart from "./components/Cart";
 import LoginPage from "./components/LoginPage";
 // import Navbar from "./components/Navbar";
 import NotFoundPage from "./components/NotFoundPage";
-import './App.css';
+import Book from "./components/Book";
+import "./App.css";
 
 // Book data (mocked)
 
@@ -36,16 +37,14 @@ function App() {
           <Route path="/" element={<BookList />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/*" element={<NotFoundPage />} />
+          {/* <Route path="/*" element={<NotFoundPage />} /> */}
+          <Route path="book/:id" element={<Book/>}/>
         </Routes>
-        <main>
-          {/* <BookList /> */}
-        </main>
+        <main>{/* <BookList /> */}</main>
 
         <footer>
           <p>
-            Prometeus{" "}
-            <a href="https://github.com/janedoe/bookstore">GitHub</a>.
+            Prometeus <a href="https://github.com/janedoe/bookstore">GitHub</a>.
           </p>
         </footer>
       </div>

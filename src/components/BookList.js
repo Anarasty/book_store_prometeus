@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import "./BookList.css";
 
 function BookList() {
@@ -79,7 +80,8 @@ function BookList() {
               <h3>{book.title}</h3>
               <p>{book.author}</p>
               <p>{book.price} USD</p>
-              <button>View Book</button>
+              {/* <button>View Book</button> */}
+              <Link to={`/book/${book.id - 1}`}>Show Book</Link>{" "}
             </li>
           ))}
         </ul>
