@@ -54,3 +54,8 @@
 .cart_items_container .action_container {
     justify-content: space-around;
 }
+
+.purchase_container {
+  margin-top: 80px;
+  align-self: flex-start;
+}

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Cart.css";
+
 const Cart = () => {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -28,6 +29,12 @@ const Cart = () => {
 
   const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
+  const handlePurchase = () => {
+    localStorage.removeItem("cart");
+    alert("Thank you for your purchase!");
+    window.location.reload();
+  };
+
   return (
     <div className="cart_container">
       <h2>CART</h2>
@@ -37,12 +44,17 @@ const Cart = () => {
           <h3 className="total_h3">
             Total Cart: {parseFloat(total).toFixed(2)} $
           </h3>
-          <button>Purchase</button>
+          <button onClick={handlePurchase}>Purchase</button>
         </>
       ) : (
         <div className="cart_empty">
           <p>Your cart is empty</p>
           <i className="fa-sharp fa-solid fa-cart-shopping"></i>
+          <div className="purchase_container">
+            <button className="purchase-button" disabled>
+              Purchase
+            </button>
+          </div>
         </div>
       )}
     </div>
