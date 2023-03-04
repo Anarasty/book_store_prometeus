@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+.notfound_page {
+    width: 100%;
+    background-color: aquamarine;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.notfound_page h1 {
+    font-size: 4rem;
+}
+.notfound_page  i{
+    font-size: 6rem;
+}

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+.cart_container {
+  width: 100%;
+  min-height: 80vh;
+  background-color: rgb(104, 237, 237);
+  width: 90%;
+  margin: 20px auto;
+  /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+.cart_container h2 {
+  font-size: 4rem;
+}
+.cart_container .total_h3 {
+  font-size: 2rem;
+}
+
+.cart_empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.cart_empty i {
+  font-size: 6rem;
+}
+
+.cart_items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart_items_container {
+  background-color: aquamarine;
+  border: 1px solid black;
+  width: 100%;
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart_items_container .info_container, .action_container  {
+    background-color: blueviolet;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart_items_container .action_container {
+    justify-content: space-around;
+}

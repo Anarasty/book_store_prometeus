@@ -9,7 +9,8 @@ function Book() {
   const [totalPrice, setTotalPrice] = useState(""); // общая стоимость по умолчанию - цена за 1 книгу
 
   useEffect(() => {
-    fetch(`https://api.npoint.io/be067bec4acffe915ca5/${id}`)
+    // fetch(`https://api.npoint.io/be067bec4acffe915ca5/${id}`)
+    fetch(`https://api.npoint.io/82cb711372a8762d67eb/${id}`)
       .then((response) => response.json())
       .then((data) => setBook(data))
       .catch((error) => console.error(error));
@@ -28,9 +29,6 @@ function Book() {
     }
   };
 
-  // const handleAddToCart = () => {
-  //   // onAddToCart({ ...book, quantity }); // добавляем книгу в корзину со всей необходимой информацией
-  // };
   const handleAddToCart = () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const newCartItem = {
@@ -48,19 +46,17 @@ function Book() {
     localStorage.setItem("cart", JSON.stringify(cart));
   };
 
-
   return (
     <div className="book_page">
       <div className="book_img_container">
-        {/* <img src={book.image} alt={book.title}></img> */}
         {book.image ? (
-                <img src={book.image} alt={book.title} />
-              ) : (
-                <img
-                  src="https://via.placeholder.com/300x300.png?text=No+Image"
-                  alt="NoImage"
-                />
-              )}
+          <img src={book.image} alt={book.title} />
+        ) : (
+          <img
+            src="https://via.placeholder.com/300x300.png?text=No+Image"
+            alt="NoImage"
+          />
+        )}
       </div>
       <div className="book_info">
         <h2>{book.title}</h2>
@@ -91,7 +87,15 @@ function Book() {
           <div>
             <label>
               Total price:
-              <input type="number" value={totalPrice} readOnly />
+              {totalPrice ? (
+                <input
+                  type="number"
+                  value={parseFloat(totalPrice).toFixed(2)}
+                  readOnly
+                />
+              ) : (
+                <input type="number" value={book.price} readOnly />
+              )}
             </label>
           </div>
           <button type="submit" onClick={handleAddToCart}>

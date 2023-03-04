@@ -6,7 +6,8 @@ function BookList() {
   const [books, setBooks] = useState([]);
   //Get Method
   const apiGet = () => {
-    fetch("https://api.npoint.io/be067bec4acffe915ca5")
+    // fetch("https://api.npoint.io/be067bec4acffe915ca5")
+    fetch("https://api.npoint.io/82cb711372a8762d67eb")
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
@@ -75,8 +76,9 @@ function BookList() {
               <h3>{book.title}</h3>
               <p>{book.author}</p>
               <p>{book.price} USD</p>
-              {/* <button>View Book</button> */}
-              <Link className="showBook" to={`/book/${book.id - 1}`}>Show Book</Link>{" "}
+              <Link className="showBook" to={`/book/${book.id}`}>
+                Show Book
+              </Link>{" "}
             </li>
           ))}
         </ul>

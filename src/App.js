@@ -7,8 +7,6 @@ import NotFoundPage from "./components/NotFoundPage";
 import Book from "./components/Book";
 import "./App.css";
 
-// Book data (mocked)
-
 function App() {
   return (
     <BrowserRouter>
@@ -21,12 +19,9 @@ function App() {
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/1024px-LEGO_logo.svg.png"
                 alt="My Bookstore"
               />
-              {/* <p>Logo1</p> */}
               <Link to="/">Logo</Link>
             </div>
             <div className="nav-buttons">
-              {/* <button className="cart-button">Cart</button>
-              <button className="profile-button">Profile</button> */}
               <Link to="/cart">Cart</Link>
               <Link to="/login">Login</Link>
             </div>
@@ -37,10 +32,8 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/*" element={<NotFoundPage />} />
-          <Route path="book/:id" element={<Book/>}/>
+          <Route path="book/:id" element={<Book />} />
         </Routes>
-        <main>{/* <BookList /> */}</main>
-
         <footer>
           <p>
             Prometeus <a href="https://github.com/janedoe/bookstore">GitHub</a>.

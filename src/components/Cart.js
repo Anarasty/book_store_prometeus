@@ -1,13 +1,5 @@
 import React from "react";
-
-// function Cart() {
-//   return (
-//     <div>
-//         <h1>Hello cart!</h1>
-//     </div>
-//   );
-// }
-
+import "./Cart.css";
 const Cart = () => {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -18,30 +10,38 @@ const Cart = () => {
   };
 
   const cartItems = cart.map((item) => (
-    <div key={item.id}>
-      <p>{item.title}</p>
-      <p>
-        {item.price} руб. x {item.quantity} шт.
-      </p>
-      <p>Итого: {item.price * item.quantity} руб.</p>
-      <button onClick={() => handleRemoveFromCart(item.id)}>
-        Удалить из корзины
-      </button>
+    <div key={item.id} className="cart_items_container">
+      <div className="info_container">
+        <h1>{item.title}</h1>
+        <h3>
+          {item.price} $ {item.quantity}x
+        </h3>
+      </div>
+      <div className="action_container">
+        <p>Total: {item.price * item.quantity} $</p>
+        <button onClick={() => handleRemoveFromCart(item.id)}>
+          <i className="fa-solid fa-trash"></i>
+        </button>
+      </div>
     </div>
   ));
 
   const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
-    <div>
-      <h2>Корзина</h2>
+    <div className="cart_container">
+      <h2>CART</h2>
       {cartItems.length ? (
         <>
           {cartItems}
-          <h3>Итого: {total} руб.</h3>
+          <h3 className="total_h3">Total Cart: {total} $</h3>
+          <button>Purchase</button>
         </>
       ) : (
-        <p>Ваша корзина пуста</p>
+        <div className="cart_empty">
+          <p>Your cart is empty</p>
+          <i className="fa-sharp fa-solid fa-cart-shopping"></i>
+        </div>
       )}
     </div>
   );
