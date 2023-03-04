@@ -18,7 +18,7 @@ const Cart = () => {
         </h3>
       </div>
       <div className="action_container">
-        <p>Total: {item.price * item.quantity} $</p>
+        <p>Total: {parseFloat(item.price * item.quantity).toFixed(2)} $</p>
         <button onClick={() => handleRemoveFromCart(item.id)}>
           <i className="fa-solid fa-trash"></i>
         </button>
@@ -34,7 +34,9 @@ const Cart = () => {
       {cartItems.length ? (
         <>
           {cartItems}
-          <h3 className="total_h3">Total Cart: {total} $</h3>
+          <h3 className="total_h3">
+            Total Cart: {parseFloat(total).toFixed(2)} $
+          </h3>
           <button>Purchase</button>
         </>
       ) : (
