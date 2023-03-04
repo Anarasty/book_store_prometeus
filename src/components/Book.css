@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+
+.book_page {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80vh;
+}
+.book_img_container {
+    width: 30%;
+    background-color: aquamarine;
+}
+.book_info {
+    width: 30%;
+    background-color: rgb(127, 221, 255);
+}
+
+.form_container {
+    width: 30%;
+    background-color: rgb(131, 127, 255);
+}
+.book_img_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.book_img_container img {
+    width: 65%;
+}
+
+.book_info h2{
+    font-size: 2.5rem;
+}
+.book_info p{
+    font-size: 1.3rem;
+}
+
+.form_container form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form_container form label{
+    font-size: 2rem;
+}
+
+.form_container form input{
+    width: 50%;
+    float: right;
+}
+
+.form_container form button {
+    width: 50%;
+    margin: 20px auto;
+}

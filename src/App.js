@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import BookList from "./components/BookList";
 import Cart from "./components/Cart";
 import LoginPage from "./components/LoginPage";
-// import Navbar from "./components/Navbar";
 import NotFoundPage from "./components/NotFoundPage";
 import Book from "./components/Book";
 import "./App.css";
@@ -37,7 +36,7 @@ function App() {
           <Route path="/" element={<BookList />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginPage />} />
-          {/* <Route path="/*" element={<NotFoundPage />} /> */}
+          <Route path="/*" element={<NotFoundPage />} />
           <Route path="book/:id" element={<Book/>}/>
         </Routes>
         <main>{/* <BookList /> */}</main>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./BookList.css";
 
 function BookList() {
@@ -64,11 +64,6 @@ function BookList() {
         <ul>
           {filteredBooks.map((book) => (
             <li key={book.id}>
-              {/* <img
-                src={book.image.length === 0 ? defaultImage : book.image}
-                src={book.image}
-                alt={book.title}
-              /> */}
               {book.image ? (
                 <img src={book.image} alt={book.title} />
               ) : (
@@ -81,7 +76,7 @@ function BookList() {
               <p>{book.author}</p>
               <p>{book.price} USD</p>
               {/* <button>View Book</button> */}
-              <Link to={`/book/${book.id - 1}`}>Show Book</Link>{" "}
+              <Link className="showBook" to={`/book/${book.id - 1}`}>Show Book</Link>{" "}
             </li>
           ))}
         </ul>
