@@ -28,9 +28,26 @@ function Book() {
     }
   };
 
+  // const handleAddToCart = () => {
+  //   // onAddToCart({ ...book, quantity }); // добавляем книгу в корзину со всей необходимой информацией
+  // };
   const handleAddToCart = () => {
-    // onAddToCart({ ...book, quantity }); // добавляем книгу в корзину со всей необходимой информацией
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const newCartItem = {
+      id: book.id,
+      title: book.title,
+      price: book.price,
+      quantity: quantity,
+    };
+    const existingCartItem = cart.find((item) => item.id === book.id);
+    if (existingCartItem) {
+      existingCartItem.quantity += quantity;
+    } else {
+      cart.push(newCartItem);
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
   };
+
 
   return (
     <div className="book_page">
@@ -77,8 +94,8 @@ function Book() {
               <input type="number" value={totalPrice} readOnly />
             </label>
           </div>
-          <button type="button" onClick={handleAddToCart}>
-            Добавить в корзину
+          <button type="submit" onClick={handleAddToCart}>
+            Add to cart
           </button>
         </form>
       </div>
