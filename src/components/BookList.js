@@ -1,22 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./BookList.css";
+import { BookContext } from "./BookContext";
 
 function BookList() {
-  const [books, setBooks] = useState([]);
+  // const { books } = useContext(BookContext);
+  const { books } = useContext(BookContext);
+  // const [books, setBooks] = useState([]);
   //Get Method
-  const apiGet = () => {
-    // fetch("https://api.npoint.io/be067bec4acffe915ca5")
-    fetch("https://api.npoint.io/82cb711372a8762d67eb")
-      .then((response) => response.json())
-      .then((json) => {
-        console.log(json);
-        setBooks(json);
-      });
-  };
-  useEffect(() => {
-    apiGet();
-  }, []);
+  // const apiGet = () => {
+  //   // fetch("https://api.npoint.io/be067bec4acffe915ca5")
+  //   fetch("https://api.npoint.io/82cb711372a8762d67eb")
+  //     .then((response) => response.json())
+  //     .then((json) => {
+  //       console.log(json);
+  //       setBooks(json);
+  //     });
+  // };
+  // useEffect(() => {
+  //   apiGet();
+  // }, []);
 
   const [selectedOption, setSelectedOption] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
