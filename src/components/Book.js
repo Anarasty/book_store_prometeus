@@ -1,20 +1,26 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import "./Book.css";
+import { BookContext } from "./BookContext";
 
 function Book() {
+  // const { id } = useParams();
+  // const [book, setBook] = useState(null);
   const { id } = useParams();
-  const [book, setBook] = useState(null);
+  const { books } = useContext(BookContext);
+
+  const book = books.find((book) => book.id === parseInt(id));
+
   const [quantity, setQuantity] = useState(1); // количество книг по умолчанию - 1
   const [totalPrice, setTotalPrice] = useState(""); // общая стоимость по умолчанию - цена за 1 книгу
 
-  useEffect(() => {
-    // fetch(`https://api.npoint.io/be067bec4acffe915ca5/${id}`)
-    fetch(`https://api.npoint.io/82cb711372a8762d67eb/${id}`)
-      .then((response) => response.json())
-      .then((data) => setBook(data))
-      .catch((error) => console.error(error));
-  }, [id]);
+  // useEffect(() => {
+  //   // fetch(`https://api.npoint.io/be067bec4acffe915ca5/${id}`)
+  //   fetch(`https://api.npoint.io/82cb711372a8762d67eb/${id}`)
+  //     .then((response) => response.json())
+  //     .then((data) => setBook(data))
+  //     .catch((error) => console.error(error));
+  // }, [id]);
   if (!book) {
     return <div>Loading...</div>;
   }
