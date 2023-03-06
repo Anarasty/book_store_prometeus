@@ -4,7 +4,6 @@ import "../styles/Book.css";
 import { BookContext } from "./BookContext";
 
 function Book() {
-  // const { id } = useParams();
   // const [book, setBook] = useState(null);
   const { id } = useParams();
   const { books } = useContext(BookContext);
@@ -15,7 +14,6 @@ function Book() {
   const [totalPrice, setTotalPrice] = useState(""); // общая стоимость по умолчанию - цена за 1 книгу
 
   // useEffect(() => {
-  //   // fetch(`https://api.npoint.io/be067bec4acffe915ca5/${id}`)
   //   fetch(`https://api.npoint.io/82cb711372a8762d67eb/${id}`)
   //     .then((response) => response.json())
   //     .then((data) => setBook(data))

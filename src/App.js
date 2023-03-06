@@ -21,21 +21,33 @@ function App() {
       <div className="App">
         <BookContextProvider>
           <header>
-            {/* <Navbar /> */}
             <nav className="navbar">
               <div className="logo">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/1024px-LEGO_logo.svg.png"
-                  alt="My Bookstore"
+                  src="https://static.vecteezy.com/system/resources/previews/009/385/602/original/old-book-clipart-design-illustration-free-png.png"
+                  alt="MyBookstore"
                 />
-                <Link to="/booklist">Logo</Link>
+                <Link className="logo_txt" to="/booklist">
+                  JS BAND STORE / Nika Minaieva
+                </Link>
               </div>
               <div className="nav-buttons">
-                <Link to="/cart">Cart</Link>
-                {/* <Link to="/">Login</Link> */}
+                {loggedIn ? (
+                  <Link to="/cart">
+                    <i className="fa-sharp fa-solid fa-cart-shopping"></i>
+                  </Link>
+                ) : (
+                  <Link to="/cart" style={{ visibility: "hidden" }}>
+                    <i className="fa-sharp fa-solid fa-cart-shopping"></i>
+                  </Link>
+                )}
                 {loggedIn && (
-                  <div>
-                    Logged in as {localStorage.getItem("user")}.
+                  <div className="user_cointainer">
+                    <img
+                      src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png"
+                      alt="user"
+                    />
+                    {localStorage.getItem("user")}
                     <button onClick={handleLogout}>Sign out</button>
                   </div>
                 )}
@@ -43,11 +55,6 @@ function App() {
             </nav>
           </header>
           <Routes>
-            {/* <Route path="/booklist" element={<BookList />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/" element={<LoginPage />} />
-          <Route path="/*" element={<NotFoundPage />} />
-          <Route path="book/:id" element={<Book />} /> */}
             <Route
               path="/"
               element={
@@ -83,8 +90,11 @@ function App() {
           </Routes>
           <footer>
             <p>
-              Prometeus{" "}
-              <a href="https://github.com/janedoe/bookstore">GitHub</a>.
+              Made in{" "}
+              <a target={"_blank"} href="https://prometheus.org.ua/">
+                Prometeus
+              </a>{" "}
+              © 2022{" "}
             </p>
           </footer>
         </BookContextProvider>

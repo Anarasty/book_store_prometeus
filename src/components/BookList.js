@@ -4,12 +4,9 @@ import "../styles/BookList.css";
 import { BookContext } from "./BookContext";
 
 function BookList() {
-  // const { books } = useContext(BookContext);
   const { books } = useContext(BookContext);
   // const [books, setBooks] = useState([]);
-  //Get Method
   // const apiGet = () => {
-  //   // fetch("https://api.npoint.io/be067bec4acffe915ca5")
   //   fetch("https://api.npoint.io/82cb711372a8762d67eb")
   //     .then((response) => response.json())
   //     .then((json) => {
