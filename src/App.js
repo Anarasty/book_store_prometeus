@@ -65,6 +65,7 @@ function App() {
                 )
               }
             />
+            <Route path="/book_store_prometeus/" element={<LoginPage />} />
             <Route
               path="/booklist"
               element={
