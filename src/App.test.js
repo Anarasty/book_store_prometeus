@@ -25,7 +25,7 @@ describe('Book component', () => {
     expect(quantityInput.value).toBe('2');
   });
 
-  test('изменение количества книг должно изменять общую стоимость', () => {
+  test('Book total', () => {
     const { getByTestId } = render(<Book />);
     const quantityInput = getByTestId('quantity-input');
     const priceInput = getByTestId('price-input');
