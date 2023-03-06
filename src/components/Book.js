@@ -57,7 +57,7 @@ function Book() {
           <img src={book.image} alt={book.title} />
         ) : (
           <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
             alt="NoImage"
           />
         )}
@@ -73,13 +73,14 @@ function Book() {
           <div>
             <label>
               Price $:
-              <input type="number" value={book.price} readOnly />
+              <input data-testid="price-input" type="number" value={book.price} readOnly />
             </label>
           </div>
           <div>
             <label>
               Quantity(1-42):
               <input
+                data-testid="quantity-input"
                 type="number"
                 value={quantity}
                 onChange={handleQuantityChange}
@@ -98,7 +99,7 @@ function Book() {
                   readOnly
                 />
               ) : (
-                <input type="number" value={book.price} readOnly />
+                <input data-testid="total-cost" type="number" value={book.price} readOnly />
               )}
             </label>
           </div>
