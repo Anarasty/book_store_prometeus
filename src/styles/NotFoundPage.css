@@ -7,11 +7,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+
 }
 
 .notfound_page h1 {
-    font-size: 4rem;
+    font-size: 6rem;
+}
+.notfound_page h3 {
+    font-size: 2rem;
 }
 .notfound_page  i{
+    margin: 20px;
     font-size: 6rem;
 }

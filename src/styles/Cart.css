@@ -68,7 +68,7 @@
   margin-top: 80px;
   align-self: flex-start;
 }
- .purchase-button {
+.purchase-button {
   color: #3e54ac;
   background-color: #ecf2ff;
   border-radius: 30px;
@@ -90,4 +90,29 @@
 .trash_btn:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 900px) {
+  .cart_container h2 {
+    font-size: 2rem;
+  }
+  .cart_container .total_h3 {
+    font-size: 1.2rem;
+  }
+  .cart_empty {
+    font-size: 1.2rem;
+  }
+  .cart_empty i {
+    font-size: 3rem;
+    margin: 20px;
+  }
+  .cart_items_container {
+    margin: 20px   0;
+  }
+  .cart_items_container h1, h3 {
+    font-size: 1rem;
+  }
+  .action_container p{
+    font-size: 1rem;
+  }
 }

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -94,4 +94,41 @@ footer {
 .user_cointainer button:hover {
   color: #3e54ac;
   background-color: #ecf2ff;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    font-size: 1.2rem;
+  }
+  .logo {
+    margin: 0 20px;
+  }
+  .logo img {
+    width: 50px;
+  }
+  footer {
+    font-size: 1.2rem;
+  }
+  .nav-buttons a {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .user_cointainer img {
+    width: 50px;
+  }
+  .user_cointainer button {
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .logo {
+    margin: 0 10px;
+  }
+  .nav-buttons a {
+    padding: 5px;
+  }
 }

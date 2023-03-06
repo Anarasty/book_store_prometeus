@@ -16,6 +16,9 @@
   font-size: 3rem;
   font-family: "Ubuntu", sans-serif;
 }
+.login-container img {
+  width: 400px;
+}
 .login-container label,
 input,
 button {
@@ -53,4 +56,25 @@ button {
 }
 .login-container button:disabled {
   opacity: 0.5;
+}
+
+@media screen and (max-width: 900px) {
+  .login-container {
+    font-size: 1.2rem;
+  }
+  .login-container label,
+  input,
+  button {
+    font-size: 1.2rem;
+  }
+  .login-container input {
+    width: 45%;
+  }
+  .login-container img {
+    width: 300px;
+  }
+  .login-container button {
+    width: 100px;
+    height: 100px;
+  }
 }

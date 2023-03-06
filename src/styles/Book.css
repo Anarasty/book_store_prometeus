@@ -82,3 +82,29 @@
 .form_container form button:hover {
   color: #3e54ac;
 }
+
+@media screen and (max-width: 900px) {
+  .book_page {
+    flex-direction: column;
+  }
+  .book_info {
+    width: 40%;
+    padding: 0 10px;
+  }
+  .book_img_container,
+  .form_container, .book_info {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .book_img_container img {
+    width: 45%;
+    margin: 10px;
+  }
+  .book_info h2, p {
+    font-size: 1.2rem;
+  }
+  .form_container form label {
+    font-size: 1.2rem;
+    line-height: 40px;
+  }
+}

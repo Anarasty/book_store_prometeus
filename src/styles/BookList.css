@@ -63,3 +63,30 @@ select {
 .showBook:hover {
   box-shadow: 0 0 10px #ecf2ff;
 }
+
+@media screen and (max-width: 900px) {
+  .book-list-search-conteiner input[type="text"],
+  select {
+    font-size: 1.2rem;
+    margin: 50px;
+  }
+  .book-list-content ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .book-list-content ul li {
+    font-size: 1.2rem;
+  margin: 30px;
+  }
+  .showBook {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .book-list-content ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .book-list-content img {
+    width: 50%;
+  }
+}
