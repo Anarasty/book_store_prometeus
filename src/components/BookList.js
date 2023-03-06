@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import "./BookList.css";
+import "../styles/BookList.css";
 import { BookContext } from "./BookContext";
 
 function BookList() {

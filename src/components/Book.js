@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { useParams } from "react-router-dom";
-import "./Book.css";
+import "../styles/Book.css";
 import { BookContext } from "./BookContext";
 
 function Book() {
