@@ -5,12 +5,6 @@
   box-sizing: border-box;
 }
 
-/* :root {
-  color: #ecf2ff;
-  color: #3e54ac;
-  color: #655dbb;
-  color: #bface2;
-} */
 .cart_container {
   width: 100%;
   min-height: 80vh;

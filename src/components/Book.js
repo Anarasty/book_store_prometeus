@@ -10,9 +10,10 @@ function Book() {
 
   const book = books.find((book) => book.id === parseInt(id));
 
-  const [quantity, setQuantity] = useState(1); // количество книг по умолчанию - 1
-  const [totalPrice, setTotalPrice] = useState(""); // общая стоимость по умолчанию - цена за 1 книгу
+  const [quantity, setQuantity] = useState(1); 
+  const [totalPrice, setTotalPrice] = useState(""); 
 
+  //OLD data fetch
   // useEffect(() => {
   //   fetch(`https://api.npoint.io/82cb711372a8762d67eb/${id}`)
   //     .then((response) => response.json())

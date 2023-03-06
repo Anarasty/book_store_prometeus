@@ -5,6 +5,7 @@ import { BookContext } from "./BookContext";
 
 function BookList() {
   const { books } = useContext(BookContext);
+  //OLD data fetch
   // const [books, setBooks] = useState([]);
   // const apiGet = () => {
   //   fetch("https://api.npoint.io/82cb711372a8762d67eb")
