@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/book_store_prometeus/static/css/main.4e729520.css",
+    "main.js": "/book_store_prometeus/static/js/main.8fef1b86.js",
+    "static/js/787.566e839d.chunk.js": "/book_store_prometeus/static/js/787.566e839d.chunk.js",
+    "index.html": "/book_store_prometeus/index.html",
+    "main.4e729520.css.map": "/book_store_prometeus/static/css/main.4e729520.css.map",
+    "main.8fef1b86.js.map": "/book_store_prometeus/static/js/main.8fef1b86.js.map",
+    "787.566e839d.chunk.js.map": "/book_store_prometeus/static/js/787.566e839d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e729520.css",
+    "static/js/main.8fef1b86.js"
+  ]
+}
