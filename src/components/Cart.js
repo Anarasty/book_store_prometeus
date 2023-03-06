@@ -20,7 +20,10 @@ const Cart = () => {
       </div>
       <div className="action_container">
         <p>Total: {parseFloat(item.price * item.quantity).toFixed(2)} $</p>
-        <button onClick={() => handleRemoveFromCart(item.id)}>
+        <button
+          className="trash_btn"
+          onClick={() => handleRemoveFromCart(item.id)}
+        >
           <i className="fa-solid fa-trash"></i>
         </button>
       </div>
@@ -44,7 +47,9 @@ const Cart = () => {
           <h3 className="total_h3">
             Total Cart: {parseFloat(total).toFixed(2)} $
           </h3>
-          <button onClick={handlePurchase}>Purchase</button>
+          <button className="purchase-button" onClick={handlePurchase}>
+            Purchase
+          </button>
         </>
       ) : (
         <div className="cart_empty">

@@ -4,12 +4,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  color: #ecf2ff;
-  color: #3e54ac;
-  color: #655dbb;
-  color: #bface2;
-}
 
 .book_page {
   display: flex;
@@ -75,13 +69,14 @@
 }
 
 .form_container form button {
-  margin: 20px auto;
+  margin: 50px auto;
   padding: 10px 20px;
   background-color: transparent;
   font-family: "Ubuntu", sans-serif;
   border: 3px solid;
   color: #ecf2ff;
   transition: 0.3s ease;
+  border-radius: 30px;
 }
 
 .form_container form button:hover {

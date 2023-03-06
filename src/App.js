@@ -86,7 +86,11 @@ function App() {
               }
             />
             <Route path="/*" element={<NotFoundPage />} />
-            <Route path="book/:id" element={<Book />} />
+            {/* <Route path="book/:id" element={<Book />} /> */}
+            <Route
+              path="/book/:id"
+              element={loggedIn ? <Book /> : <Navigate to="/login" replace />}
+            />
           </Routes>
           <footer>
             <p>

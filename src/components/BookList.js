@@ -69,7 +69,7 @@ function BookList() {
                 <img src={book.image} alt={book.title} />
               ) : (
                 <img
-                  src="https://via.placeholder.com/300x300.png?text=No+Image"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
                   alt="NoImage"
                 />
               )}
